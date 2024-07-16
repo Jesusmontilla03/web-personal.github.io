@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --Narrow-Family: "Archivo Narrow", sans-serif;
+    --var-colors: #1A56B8, #371A46, #2E163A, #F2F2F2, #020C18;
+}
+
+/*------------------- MOBILE DESIGN ---------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Narrow-Family);
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(300deg,#1A56B8, 40%,#F2F2F2);
+}
+.pc-background {
+    width: 250px;
+    height: 250px;
+    background-image: url(./assets/laptop.svg);
+    background-size: 100%;
+    position: absolute;
+    top: 24%;
+    left: 6%;
+    transform: translateY(-24%);
+}
+.atom-background {
+    width: 180px;
+    height: 180px;
+    background-image: url(./assets/atom.svg);
+    background-size: 100%;
+    position: absolute;
+    bottom: 22%;
+    right: 8%;
+    transform: translateY(-22%);
+}
+header {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(350deg, #2E163A, #371A46, #1A56B8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F2F2;
+    position: fixed;
+    top: 0;
+}
+main {
+    width: 100%;
+    height: 100%;
+    padding: 80px 0;
+}
+.plan {
+    width: 80%;
+    height: 120px;
+    position: relative;
+    background-color: #F2F2F2;
+    margin: 20px auto;
+    border-radius: 12px;
+    opacity: 85%;
+    box-shadow: 3px 3px 14px 1px;
+}
+.plan:hover {
+    width: 82%;
+    height: 124px;
+}
+nav {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(350deg, #2E163A, #371A46, #1A56B8);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+}
+nav .main-options.active {
+    width: 65px;
+    transition: 0.1ms;
+    & img {
+        width: 100%;
+    }
+}
+
+/*------------------- DESKTOP DESIGN -------------------*/
+
+@media (min-width: 800px) {
+    .pc-background {
+        background-image: url(./assets/pc.svg);
+        width: 380px;
+        height: 380px;
+        top: (18%);
+        left: 36%;
+        transform: translateY(-18%);
+    }
+    .atom-background {
+        right: 24%;
+    }
+    header {
+        background: linear-gradient(350deg, #020C18, #371A46 30%, #1A56B8);
+        box-shadow: 3px 3px 12px 1px #2e2e2e;        
+    }
+    main {
+        display: none;
+    }
+    nav {
+        width: 200px;
+        height: 100%;
+        box-shadow: 2px 0 14px 1px;
+    }
+}
+
